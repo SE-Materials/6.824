@@ -5,14 +5,18 @@ package main
 // in ../mr/master.go
 //
 // go run mrmaster.go pg*.txt
+// go run -race mrmaster.go pg-*.txt
 //
 // Please do not change this file.
 //
 
-import "../mr"
-import "time"
-import "os"
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"time"
+
+	"../mr"
+)
 
 func main() {
 	if len(os.Args) < 2 {

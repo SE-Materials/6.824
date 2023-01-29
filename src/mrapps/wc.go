@@ -4,12 +4,16 @@ package main
 // a word-count application "plugin" for MapReduce.
 //
 // go build -buildmode=plugin wc.go
+// go build -race -buildmode=plugin ../mrapps/wc.go
 //
 
-import "../mr"
-import "unicode"
-import "strings"
-import "strconv"
+import (
+	"strconv"
+	"strings"
+	"unicode"
+
+	"../mr"
+)
 
 //
 // The map function is called once for each file of input. The first
